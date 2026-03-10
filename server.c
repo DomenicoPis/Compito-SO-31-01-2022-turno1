@@ -13,7 +13,7 @@ int main() {
 
     key_t chiave_coda_connessione = ftok(".", 'a');
 
-    int id_coda_connessione = msgget(chiave_coda_connessione, IPC_CREAT | 0664));
+    int id_coda_connessione = msgget(chiave_coda_connessione, IPC_CREAT | 0664);
     if(id_coda_connessione < 0){
         perror("errore msgget coda connessione");
         exit(1);
